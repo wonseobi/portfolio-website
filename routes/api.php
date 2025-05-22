@@ -9,11 +9,13 @@ Route::middleware(whmcs::class)->group(function () {
     Route::get('/user', function (Request $request) {
         $client = \Whmcs::Client();
 
+        $response = $client->GetClients();
 
-        dd($client->GetClients());
+
+        dump($client->GetClients());
         // dd($client->GetClientPassword(['email' => 'desarrollo@certerus.com']));
         // dd($client->GetClientPassword(['email' => 'omar@nubew.com']));
 
-        return $request->user();
+        return $response;
     });
 });
