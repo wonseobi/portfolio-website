@@ -36,8 +36,19 @@ export default function Projects() {
           <motion.li
             key={i}
             variants={itemVariants}
-            whileHover={{ scale: 1.03, transition: { duration: 0.3, ease: "easeOut" } }}
-            style={{ background: "rgba(255,255,255,0.05)", borderRadius: "1rem", padding: "2rem", boxShadow: "0 4px 30px rgba(0,0,0,0.2)", willChange: "transform" }}
+            whileHover={{
+              scale: 1.1,
+              y: -10,
+              boxShadow: "0 10px 40px rgba(255, 255, 255, 0.6)", // lighter white glow
+              transition: { duration: 0.2, ease: "easeOut" },     // faster and no delay
+            }}
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: "1rem",
+              padding: "2rem",
+              boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
+              willChange: "transform, box-shadow",
+            }}
           >
             <h3>{proj.title}</h3>
             <p>{proj.desc}</p>
