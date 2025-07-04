@@ -3,6 +3,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return(
@@ -12,6 +13,7 @@ function App() {
       <Projects />
       <About />
       <Contact />
+      <ScrollToTop/>
     </>
   )
 }
